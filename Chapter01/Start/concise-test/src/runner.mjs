@@ -1,6 +1,9 @@
 import path from "path";
+import { pathToFileURL } from "url";
 
 export const run = async () => {
-  await import(path.resolve(process.cwd(), "test/tests.mjs"));
+  await import(
+    pathToFileURL(path.resolve(process.cwd(), "test/tests.mjs")).href
+  );
   console.log("Test run finished");
 };
