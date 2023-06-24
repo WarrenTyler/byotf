@@ -1,5 +1,5 @@
 import { emptyTodo, markAsDone } from "../src/todo.mjs";
-import { TodoRepository } from "../src/todoRepository.mjs";
+import { TodoRepository } from "../src/TodoRepository.mjs";
 
 const todo = emptyTodo();
 
