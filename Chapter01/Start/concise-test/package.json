@@ -9,7 +9,10 @@
   "author": "",
   "license": "ISC",
   "type": "module",
-  "bin": "./src/cli.mjs",
+  "bin": {
+    "cli": "./src/cli.mjs",
+    "desc-plot": "./src/desc-plot.mjs"
+  },
   "exports": {
     ".": "./src/runner.mjs"
   }
