@@ -32,7 +32,7 @@ export const it = (name, body) => {
     body();
     successes++;
   } catch (e) {
-    console.error(color(`  <red>✗</red> ${name}`));
+    console.error(color(`<red>✗</red> ${name}`));
     console.error(e);
     failures++;
   }
