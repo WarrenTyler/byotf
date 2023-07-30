@@ -27,13 +27,21 @@ export const run = async () => {
   process.exit(failures !== 0 ? exitCodes.failures : exitCodes.ok);
 };
 
+const tick = "\u2713";
+const cross = "\u2717";
 export const it = (name, body) => {
   try {
     body();
+    console.log(color(` <green>${tick}</green> ${name}`));
     successes++;
   } catch (e) {
-    console.error(color(`<red>✗</red> ${name}`));
+    console.log(color(` <red>${cross}</red> ${name}`));
     console.error(e);
     failures++;
   }
+};
+
+export const describe = (name, body) => {
+  console.log(name);
+  body();
 };
